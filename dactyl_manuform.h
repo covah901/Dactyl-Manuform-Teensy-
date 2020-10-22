@@ -3,25 +3,25 @@
 
 #include "quantum.h"
 
-#define KEYMAP( \
-             LA3, LA4, LA5, LA6, LA7, LA8,       RA1, RA2, RA3, RA4, RA5, RA6, RA7, RA8, \
-             LB3, LB4, LB5, LB6, LB7, LB8,       RB1, RB2, RB3, RB4, RB5, RB6, RB7, RB8, \
-             LC3, LC4, LC5, LC6, LC7, LC8,       RC1, RC2, RC3, RC4, RC5, RC6, RC7, RC8, \
-  LD1,       LD3, LD4, LD5, LD6, LD7, LD8,       RD1, RD2, RD3, RD4, RD5, RD6, RD7, RD8, \
-  LE1,  LE2, LE3, LE4, LE5, LE6, LE7, LE8,       RE1, RE2, RE3, RE4, RE5, RE6, RE7, RE8 \
-  ) \
-  { \
-    { KC_NO, KC_NO, LA3, LA4, LA5, LA6, LA7, LA8}, \
-    { KC_NO, KC_NO, LB3, LB4, LB5, LB6, LB7, LB8 }, \
-    { KC_NO, KC_NO, LC3, LC4, LC5, LC6, LC7, LC8 }, \
-    { LD1, KC_NO,   LD3, LD4, LD5, LD6, LD7, LD8 }, \
-    { LE1,   LE2,   LE3, LE4, LE5, LE6, LE7, LE8 }, \
-\
-    { RA1, RA2, RA3, RA4, RA5, RA6, RA7, RA8 }, \
-    { RB1, RB2, RB3, RB4, RB5, RB6, RB7, RB8 }, \
-    { RC1, RC2, RC3, RC4, RC5, RC6, RC7, RC8 }, \
-    { RD1, RD2, RD3, RD4, RD5, RD6, RD7, RD8 }, \
-    { RE1, RE2, RE3, RE4, RE5, RE6, RE7, RE8 } \
-  }
+#define LAYOUT( \
+	L00, L01, L02, L03, L04, L05, R00, R01, R02, R03, R04, R05, \
+	L10, L11, L12, L13, L14, L15, R10, R11, R12, R13, R14, R15, \
+	L20, L21, L22, L23, L24, L25, R20, R21, R22, R23, R24, R25, \
+	L30, L31, L32, L33, L34, L35, R30, R31, R32, R33, R34, R35, \
+	L40, L41, L42, L43, L44, L45, R40, R41, R42, R43, R44, R45 \
+	) \
+	{ \
+		{ L00, L01, L02, L03, L04, L05 }, \
+		{ L10, L11, L12, L13, L14, L15 }, \
+		{ L20, L21, L22, L23, L24, L25 }, \
+		{ L30, L31, L32, L33, L34, L35 }, \
+		{ KC_NO, KC_NO, KC_NO, KC_NO, L44, L45 }, \
+		{ R00, R01, R02, R03, R04, R05 }, \
+		{ R10, R11, R12, R13, R14, R15 }, \
+		{ R20, R21, R22, R23, R24, R25 }, \
+		{ R30, R31, R32, R33, R34, R35 }, \
+		{ R40, R41, KC_NO, KC_NO, KC_NO, KC_NO }  \
+	}
 
 #endif
+
