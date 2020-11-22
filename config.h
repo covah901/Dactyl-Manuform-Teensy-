@@ -20,8 +20,8 @@
 
 /* key matrix pins */
 #ifdef MASTER_LEFT
-#define MATRIX_ROW_PINS { C0, C1, C2, C4, C3 }
-#define MATRIX_COL_PINS { E1, E0, D7, F3, D5, D4 }
+#define MATRIX_ROW_PINS { D2, D3, D4, D5, D6 }
+#define MATRIX_COL_PINS { D7, E0, E1, C0, C1, E7 }
 #endif
 
 #ifdef MASTER_RIGHT
