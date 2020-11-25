@@ -138,8 +138,4 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     }
   }
 }
-/* Turns on blue led */
-void keyboard_post_init_user(void) {
-    setPinOutput(C13);
-    writePinLow(C13);
-}
+
