@@ -1,4 +1,4 @@
-#include QMK_KEYBOARD_H
+#include "dactyl_manuform.h"
 
 // Defines names for use in layer keycodes and the keymap
 #define _QWERTY 0
