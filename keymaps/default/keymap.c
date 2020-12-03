@@ -1,4 +1,4 @@
-#include "dactyl_manuform.h"
+#include QMK_KEYBOARD_H
 
 // Defines names for use in layer keycodes and the keymap
 #define _QWERTY 0
@@ -17,6 +17,7 @@ enum custom_keycodes {
 #define RAISE MO(_RAISE)
 #define FN MO(_FN)
 #define F_FN2 LT(_FN2, KC_F)
+#define COPY C(KC_V)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_QWERTY] = LAYOUT(
@@ -78,30 +79,30 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     switch(get_highest_layer(layer_state)){
       case 0: //Layer 0
         if (!clockwise) { // Remove ! to reverse direction
-          tap_code(KC_PGUP);
+          tap_code(KC_VOLD);
         } else {
-          tap_code(KC_PGDN);
+          tap_code(KC_VOLU);
         }
         break;
       case 5: //Layer 4
         if (!clockwise) {
-          tap_code(KC_WH_L);
-        } else {
           tap_code(KC_WH_R);
+        } else {
+          tap_code(KC_WH_L);
         }
         break;
       case 2: //Layer 2
         if (!clockwise) {
-          tap_code(KC_PGUP);
-        } else {
           tap_code(KC_PGDN);
+        } else {
+          tap_code(KC_PGUP);
         }
         break;
       default:
         if (!clockwise) {
-          tap_code(KC_PGUP);
-        } else {
           tap_code(KC_PGDN);
+        } else {
+          tap_code(KC_PGUP);
         }
         break;
     }
@@ -109,9 +110,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
         switch(get_highest_layer(layer_state)){
       case 0: //Layer 0
         if (!clockwise) { // Remove ! to reverse direction
-          tap_code16(C(KC_RGHT));
-        } else {
           tap_code16(C(KC_LEFT));
+        } else {
+          tap_code16(C(KC_RGHT));
         }
         break;
       case 4: //Layer 4
@@ -130,9 +131,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
         break;
       default:
         if (!clockwise) {
-          tap_code16(C(KC_RGHT));
-        } else {
           tap_code16(C(KC_LEFT));
+        } else {
+          tap_code16(C(KC_RGHT));
         }
         break;
     }
